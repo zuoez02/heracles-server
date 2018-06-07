@@ -1,0 +1,10 @@
+server:
+  image: zuoez02/heracles-server
+  ports:
+    - "4732:8080"
+  volumes:
+    - /home/developer/.heracles:/heracles
+  environment:
+    SAVE_PATH: /heracles
+    PORT: 8080
+  command: "node bin/www"
